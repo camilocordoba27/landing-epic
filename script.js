@@ -53,3 +53,15 @@
   function cashBack() {
     window.location.href= "https://my.sisu.partners/visit/?bta=35985&nci=5668"
   }
+
+
+ function pixelRef() {
+  fbq('track', 'AddPaymentInfo', {
+    value: 5000,
+    currency: 'CLP'
+  });
+
+  setTimeout(function() {
+    window.location.href = "https://my.sisu.partners/visit/?bta=35985&nci=5672";
+  }, 300);
+}
