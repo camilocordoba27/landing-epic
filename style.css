@@ -1091,3 +1091,109 @@
     .casino-wrapper:hover .slider-infinite {
       animation-play-state: paused;
     }
+
+
+
+.payband{
+  padding: 18px 0 10px;
+}
+
+.payband__container{
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.08);
+  background:
+    radial-gradient(600px 200px at 10% 0%, rgba(174, 246, 92, 0.15), transparent 60%),
+    linear-gradient(180deg, var(--bg-0), var(10,10,16,.95));
+  overflow: hidden;
+}
+
+.payband__head{
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.payband__eyebrow{
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(156, 226, 26, 0.15);
+  color: #d8f24a;
+}
+
+.payband__title{
+  font-size: 20px;
+  margin-top: 6px;
+  color: #fff;
+}
+
+/* SLIDER */
+.payband__slider{
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.payband__track{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  animation: scrollPay 20s linear infinite;
+}
+
+/* CARD LOGO */
+.pay-item{
+  width: 150px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.03);
+  transition: .2s;
+}
+
+.pay-item:hover{
+  transform: translateY(-2px);
+  border-color: rgba(139,92,246,.4);
+}
+
+/* LOGOS */
+.pay-item img{
+  max-width: 90px;
+  max-height: 28px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+
+  /* esto los deja blancos si son oscuros */
+  filter: brightness(0) invert(1);
+  opacity: .9;
+}
+
+/* ANIMACION */
+@keyframes scrollPay{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  .pay-item{
+    width: 120px;
+    height: 50px;
+  }
+
+  .pay-item img{
+    max-width: 75px;
+    max-height: 24px;
+  }
+
+  .payband__track{
+    animation-duration: 14s;
+  }
+}
