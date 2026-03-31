@@ -62,6 +62,6 @@
   });
 
   setTimeout(function() {
-    window.location.href = "https://my.sisu.partners/visit/?bta=35985&nci=5672";
+    window.location.href = "https://my.sisu.partners/visit/?bta=35985&nci=5670";
   }, 300);
 }
